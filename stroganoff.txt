@@ -1,4 +1,4 @@
-#!/bin/stroganoff
+#!/bin/eng
 
 prepCounter() {
 	_steak() {

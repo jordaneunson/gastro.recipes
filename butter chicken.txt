@@ -1,4 +1,4 @@
-#!/sbin/butter_chicken
+#!/bin/eng
 
 # 20200402 Notes:
 # - Improve rice.

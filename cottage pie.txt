@@ -1,4 +1,4 @@
-#!/bin/cottagePie
+#!/bin/eng
 
 fryingPan(highHeat) {
     _groundBeef(340g)

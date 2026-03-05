@@ -1,4 +1,4 @@
-#!/bin/irishPotatoSoup
+#!/bin/eng
 
 dutchOven(mediumheat) {
 		_baconStrips

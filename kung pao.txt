@@ -1,4 +1,4 @@
-#!/bin/kungpao
+#!/bin/eng
 
 mediumPot(highHeat) {
 		_water(boil)

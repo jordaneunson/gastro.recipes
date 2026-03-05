@@ -1,4 +1,4 @@
-#!/bin/indianrice
+#!/bin/eng
 
 smallPot(mediumHeat) {
 		cascadingFry() {

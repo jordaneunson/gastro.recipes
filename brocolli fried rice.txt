@@ -1,4 +1,4 @@
-#!/bin/broccoli_fried_rice
+#!/bin/eng
 
 soyMix() {
     _soySauce(1tbsp)

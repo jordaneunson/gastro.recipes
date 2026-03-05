@@ -1,4 +1,4 @@
-#!/bin/clamchowder
+#!/bin/eng
 
 dutchOven(mediumHeat) {
     _bacon(3strips){chopped}

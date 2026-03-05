@@ -1,4 +1,4 @@
-#!/bin/braised_short_rib
+#!/bin/eng
 
 # 1lb of shortrib should be 3x3-inch pieces, NOT STRIPS.
 

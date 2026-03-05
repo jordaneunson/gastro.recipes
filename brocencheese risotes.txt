@@ -1,4 +1,4 @@
-#!/jordans/kitchen
+#!/bin/eng
 
 toGetsBeforeHand() {
     _thymeLeaves # Pick as many leaves as you can, more than you think.

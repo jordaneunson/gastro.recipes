@@ -1,4 +1,4 @@
-#!/bin/roastchicken
+#!/bin/eng
 
 1 whole chicken, rinse it off
 

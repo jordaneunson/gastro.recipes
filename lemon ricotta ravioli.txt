@@ -1,4 +1,4 @@
-#!/bin/freshpasta
+#!/bin/eng
 
 lemon ricotta ravioli
 

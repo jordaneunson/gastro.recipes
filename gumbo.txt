@@ -1,4 +1,4 @@
-#!/bin/gumbo
+#!/bin/eng
 
 smallBowl():
     creoleVeg() {
