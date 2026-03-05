@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 # 20200402 Notes:
 # - Improve rice.

@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 oven(350F) {}
 mediumPot(highHeat) {

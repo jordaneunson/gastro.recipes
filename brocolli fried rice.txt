@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 soyMix() {
     _soySauce(1tbsp)

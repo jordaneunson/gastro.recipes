@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 # Best eaten on cold days with warm fresh thick bread, like an olive loaf or focaccia.
 

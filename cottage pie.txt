@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 fryingPan(highHeat) {
     _groundBeef(340g)

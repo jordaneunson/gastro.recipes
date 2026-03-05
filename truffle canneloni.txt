@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 fryPan(mediumHeat) {
 		_onion(1/2){diced}

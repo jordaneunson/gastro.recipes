@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 dutchOven(mediumHeat) {
 		_onion(1){diced}

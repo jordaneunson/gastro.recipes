@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 # 1lb of shortrib should be 3 3x3 inch pieces, NOT STRIPS
 

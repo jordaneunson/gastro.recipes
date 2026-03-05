@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 # 
 # feeds 2 people with other dishes
 # 20201220 - v0.1

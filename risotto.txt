@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 toGetBeforeHand() {
         _thymeLeaves #pick as many leaves as you can, more than you think

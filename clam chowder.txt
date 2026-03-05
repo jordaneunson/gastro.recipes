@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 dutchOven(mediumHeat) {
     _bacon(3strips){chopped}

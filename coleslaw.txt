@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 _dressing() {
     _mayonnaise(1/2 cup)

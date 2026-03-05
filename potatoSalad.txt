@@ -1,4 +1,4 @@
-#!/bin/eng
+#!/bin/gastro
 
 _potatoSalad() {
     _potatoes(1kg){cubed, boiled until tender}
