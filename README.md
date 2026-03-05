@@ -1,4 +1,4 @@
-# masticable.eng
+# gastro.recipes
 
 Recipes written as pseudocode. Not a cookbook — a codebase.
 
