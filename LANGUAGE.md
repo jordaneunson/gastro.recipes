@@ -201,11 +201,9 @@ The equipment persists between blocks — contents carry forward unless explicit
 
 ## 6. Actions
 
-Actions are function calls that represent cooking operations.
+Actions use colon syntax — `action: target`.
 
-### 6.1 Colon Syntax
-
-The preferred form. Clean, readable, and consistent:
+### 6.1 Syntax
 
 ```
 fry: equalParts
@@ -220,32 +218,24 @@ wait: 40mins
 
 Multiple targets are comma-separated after the colon.
 
-### 6.2 Function-Call Syntax
+### 6.2 No-Argument Actions
 
-Also valid. Use when it reads more naturally:
+Actions with no target omit the colon:
 
 ```
-cook(5mins)
-simmer(40mins)
-sear(allSides)
-stir(untilMelted)
-deglaze()
-flip()
-remove()
-drain(fat)
-blitz(half)
-rest(10mins)
-slice()
+flip
+remove
+deglaze
+slice
 ```
 
 ### 6.3 Action Arguments
 
-- **Time:** `cook(5mins)`, `simmer(40mins)`, `wait(30seconds)`
-- **Condition:** `stir(untilMelted)`, `cook(tillSoft)`, `cook(alDente)`
-- **Target:** `drain(fat)`, `blitz(half)`
-- **Scope:** `sear(allSides)`, `cook(5mins){eachSide}`
-
-Both syntaxes are valid. Use whichever reads better — but favour colon syntax for clarity.
+- **Time:** `cook: 5mins`, `simmer: 40mins`, `wait: 30seconds`
+- **Condition:** `stir: untilMelted`, `cook: tillSoft`, `cook: alDente`
+- **Target:** `drain: fat`, `blitz: half`
+- **Scope:** `sear: allSides`, `cook: 5mins{eachSide}`
+- **Multiple:** `garnish: _shreddedParm, _fineParsley`
 
 ---
 
@@ -511,7 +501,7 @@ statement     ::= ingredient | action | comment | block | reference
 ingredient    ::= '_' name quantity? modifier?
 quantity      ::= '(' value ')'
 modifier      ::= '{' value (',' value)* '}'
-action        ::= name '(' args? ')' modifier? | name ':' value (',' value)*
+action        ::= name ':' value (',' value)* | name
 reference     ::= '+' name '(' ')'
 comment       ::= '#' text
 args          ::= value (',' value)*

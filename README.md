@@ -103,7 +103,7 @@ _truffle(as much as u can afford)
 Quantities are informal: `enough`, `generous`, `glug`, `a tad`, `the whole god damn package`.
 
 #### Actions
-Prefer colon syntax for readability:
+Always colon syntax — `action: target`:
 ```
 fry: equalParts
 add: _redWine(enough)
@@ -112,16 +112,17 @@ mix: all
 toss: _spaghetti, _sauce
 cook: _spaghetti
 wait: 40mins
+sear: allSides
+simmer: 40mins
+drain: fat
 ```
 
-Function-call syntax also valid:
+No-argument actions stand alone:
 ```
-sear(allSides)
-simmer(40mins)
-deglaze()
-flip()
-remove()
-drain(fat)
+flip
+remove
+deglaze
+slice
 ```
 
 #### Plating / Serving
