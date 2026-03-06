@@ -176,14 +176,15 @@ The same equipment can appear multiple times. Each block represents a phase — 
 
 ```
 saucePan(mediumHeat) {
-    equalParts(_veal, _beef, _pork)
+    add: equalParts(_veal, _beef, _pork)
     fry: equalParts
     add: _redWine(enough)
     wait: 30seconds
 }
 
 saucePan(mediumHeat) {
-    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+    add: _onion(1/2), _carrot(1), _celeryStalk(1)
+    blitz
     fry: tillSoft
 }
 
@@ -206,19 +207,41 @@ Actions use colon syntax — `action: target`.
 ### 6.1 Syntax
 
 ```
-fry: equalParts
+add: _oliveOil
+add: _shortRib(1lb){seasoned}
 add: _redWine(enough)
-add: _chickenBroth(enoughForSauce)
+fry: equalParts
+cook: tillSoft
 mix: all
 toss: _spaghetti, _sauce
 garnish: _shreddedParm, _fineParsley
-cook: _spaghetti
 wait: 40mins
+sear: _shortRib
+remove: _shortRib
 ```
 
 Multiple targets are comma-separated after the colon.
 
-### 6.2 No-Argument Actions
+### 6.2 Adding Ingredients
+
+Ingredients entering a vessel always use `add:` — they don't appear bare inside equipment blocks:
+
+```
+dutchOven(mediumHighHeat) {
+    add: _oliveOil
+    add: _shortRib(1lb){seasoned}
+    sear: _shortRib
+    remove: _shortRib
+}
+```
+
+Ingredients as arguments to functions are the exception:
+
+```
+equalParts(_veal, _beef, _pork)
+```
+
+### 6.3 No-Argument Actions
 
 Actions with no target omit the colon:
 
@@ -227,15 +250,18 @@ flip
 remove
 deglaze
 slice
+preheat
+serve
 ```
 
-### 6.3 Action Arguments
+### 6.4 Action Arguments
 
 - **Time:** `cook: 5mins`, `simmer: 40mins`, `wait: 30seconds`
 - **Condition:** `stir: untilMelted`, `cook: tillSoft`, `cook: alDente`
-- **Target:** `drain: fat`, `blitz: half`
+- **Target:** `drain: fat`, `blitz: half`, `sear: _shortRib`
 - **Scope:** `sear: allSides`, `cook: 5mins{eachSide}`
 - **Multiple:** `garnish: _shreddedParm, _fineParsley`
+- **Ingredient:** `add: _wine(1/3cup)`, `remove: _shortRib`
 
 ---
 
@@ -425,14 +451,15 @@ The bolognese recipe demonstrates the ideal structure:
 # Servings: 4
 
 saucePan(mediumHeat) {
-    equalParts(_veal, _beef, _pork)
+    add: equalParts(_veal, _beef, _pork)
     fry: equalParts
     add: _redWine(enough)
     wait: 30seconds
 }
 
 saucePan(mediumHeat) {
-    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+    add: _onion(1/2), _carrot(1), _celeryStalk(1)
+    blitz
     fry: tillSoft
 }
 
@@ -463,7 +490,8 @@ Key patterns:
 - Metadata as comments (`# Servings: 4`)
 - Equipment blocks with heat as first argument
 - Same equipment reused across phases with different heat
-- Colon syntax for actions (`fry:`, `add:`, `mix:`, `toss:`, `garnish:`)
+- Ingredients always enter via `add:`
+- Colon syntax for all actions (`fry:`, `add:`, `mix:`, `toss:`, `garnish:`)
 - Ingredients always prefixed with `_`
 - `plate` block as endpoint
 - 4-space indentation throughout
@@ -478,7 +506,7 @@ Key patterns:
 3. **Equipment** — camelCase. Heat in first argument.
 4. **Quantities** — in `()`. Be as precise or vague as the recipe demands.
 5. **Modifiers** — in `{}`. Comma-separated if multiple.
-6. **Actions** — prefer colon syntax (`add: _thing`) for readability.
+6. **Actions** — always colon syntax. Ingredients always enter via `add:`.
 7. **Comments** — use freely. Especially for warnings and timing notes.
 8. **Indentation** — 4 spaces inside blocks. Nested blocks get another 4.
 9. **Naming** — files named after the dish, plain English, `.txt` extension.

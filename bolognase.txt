@@ -2,14 +2,15 @@
 # Servings: 4
 
 saucePan(mediumHeat) {
-    equalParts(_veal, _beef, _pork)
+    add: equalParts(_veal, _beef, _pork)
     fry: equalParts
     add: _redWine(enough)
     wait: 30seconds
 }
 
 saucePan(mediumHeat) {
-    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+    add: _onion(1/2), _carrot(1), _celeryStalk(1)
+    blitz
     fry: tillSoft
 }
 

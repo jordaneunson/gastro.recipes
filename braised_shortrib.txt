@@ -1,31 +1,34 @@
 #!/bin/gastro
-
 # 1lb of shortrib should be 3x3-inch pieces, NOT STRIPS.
 
-preHeat(oven(300F))
-
-dutchOven(mediumHighHeat, _oliveOil) {
-    sear() {
-    season(_shortRib(1lb))
-    }
+oven(300F) {
+    preheat
 }
 
-bits = slice(_onion, _shallot, _garlicClove(3))
+dutchOven(mediumHighHeat) {
+    add: _oliveOil
+    add: _shortRib(1lb){seasoned, 3x3-inch pieces}
+    sear: _shortRib
+    remove: _shortRib
+}
 
 dutchOven(mediumHeat) {
-    bits
-    while (bits != soft) {
-    _wine(1/3cup)
-    _soy(2tbsp)
-    _broth(1/3cup)
-    }
+    add: _onion{sliced}
+    add: _shallot{sliced}
+    add: _garlicClove(3){sliced}
+    cook: tillSoft
+    add: _wine(1/3cup)
+    add: _soy(2tbsp)
+    add: _broth(1/3cup)
+    add: _shortRib
 }
 
-dutchOven(oven(300F))
+dutchOven(oven, 300F) {
+    wait: 1.25hrs
+}
 
-wait(1.25hrs)
+serve
 
-eat()
-
-# Take the bones and put them in a pot with water on high with rosemary and
-# bay leaves. Once boiling, reduce heat to boil(6/10).
+# Take the bones and put them in a pot with water on high
+# with rosemary and bay leaves. Once boiling, reduce heat
+# to boil(6/10).
