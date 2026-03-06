@@ -7,14 +7,14 @@ toGetBeforeHand() {
 }
 
 dutchOven(highHeat, oliveOil) {
-	fry() {
+    fry() {
         blitz(_whiteOnion(1/2), _celeryStalk) # add _spicyHotSausage(1) for brocencheese
-	}
-	while(blitz != soft) { wait }
-	stir in {
+    }
+    while(blitz != soft) { wait }
+    stir in {
         _arborioRice
         _pinotGris(3/4cup)
-	}
+    }
 }
 
 dutchOven(mediumHeat) {

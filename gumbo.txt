@@ -2,10 +2,10 @@
 
 smallBowl():
     creoleVeg() {
-		_onion(1){chopped}
-		_celery(2){chopped}
-		_redPepper(1){chopped}
-	}
+        _onion(1){chopped}
+        _celery(2){chopped}
+        _redPepper(1){chopped}
+    }
 
 
 spices() {
@@ -24,7 +24,7 @@ dutchOven(mediumHeat):
         wait(2mins)    # Looking for the color of an old penny
     _creoleVeg
     _garlic(6 cloves){crushed}
-	_spices()
+    _spices()
     _sausages(3, skinless)
     _chickenThighs(2, skinless, boneless, optional)
     _cannedTomatoes(14oz)

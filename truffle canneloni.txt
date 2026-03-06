@@ -1,18 +1,18 @@
 #!/bin/gastro
 
 fryPan(mediumHeat) {
-		_onion(1/2){diced}
-		_mushrooms(sliced)
-		_truffle(as much as u can afford)
-		_butter(1/3cup)
-		_creamo(1/2litre)
-		_cornstarch
-		_seasoning
+        _onion(1/2){diced}
+        _mushrooms(sliced)
+        _truffle(as much as u can afford)
+        _butter(1/3cup)
+        _creamo(1/2litre)
+        _cornstarch
+        _seasoning
 }
 
 bakePan(350F) {
-		add a layer of sauce
-		place in cannelonis
-		cover in sauce
-		bake 20mins
+        add a layer of sauce
+        place in cannelonis
+        cover in sauce
+        bake 20mins
 }

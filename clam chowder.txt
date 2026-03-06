@@ -2,17 +2,17 @@
 
 dutchOven(mediumHeat) {
     _bacon(3strips){chopped}
-		when(_bacon){desired}
-    		_onion(1){diced}
-    		_celery(1){sliced}
-    		_carrot(1){sliced}
+        when(_bacon){desired}
+            _onion(1){diced}
+            _celery(1){sliced}
+            _carrot(1){sliced}
 }
 
 dutchOven(highHeat) {
     _newPotatoes(enough){diced}
     _chickenBroth(to cover)
     _bayLeaf(2)
-	_thyme
+    _thyme
 }
 
 smallPot(lowHeat) {
@@ -25,6 +25,6 @@ smallPot(lowHeat) {
 dutchOven(noHeat) {
     _smallPot
     _cannedClams{withJuice}
-	_dill(the whole god damn package){chopped finely}
+    _dill(the whole god damn package){chopped finely}
 }
 

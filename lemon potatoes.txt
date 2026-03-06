@@ -1,36 +1,36 @@
 #!/bin/gastro
 
 largePot(highHeat) {
-		_water(boil)
-		then
-		_russetPotatoes(1kg){peeled,quartered}
-		_salt
-		_bakingSoda(1tsp)
-		wait(2mins)
+        _water(boil)
+        then
+        _russetPotatoes(1kg){peeled,quartered}
+        _salt
+        _bakingSoda(1tsp)
+        wait(2mins)
 }
 
 largeBowl() {
-		_garlic(6cloves){crushed}
-		_yellowMustard(2tbsp)
-		_lemonJuice(1/3cup)
-		_oregano(1tbsp)
-		_oliveOil(1/2cup)
-		_salt(1tsp)
-		_pepper(1tsp)
-		_russetPotatoes(from pot)
+        _garlic(6cloves){crushed}
+        _yellowMustard(2tbsp)
+        _lemonJuice(1/3cup)
+        _oregano(1tbsp)
+        _oliveOil(1/2cup)
+        _salt(1tsp)
+        _pepper(1tsp)
+        _russetPotatoes(from pot)
  }
 
 largeZipLock(largeBowl) {fridge, 1hour min}
 
 oven(390F) {
-		largeCasseroleDish(largeZipLock) {}
-		#place a baking sheet over top of the casserole Dish
-		wait(1hour)
-		# remove baking sheet
-		wait(45mins)
+        largeCasseroleDish(largeZipLock) {}
+        #place a baking sheet over top of the casserole Dish
+        wait(1hour)
+        # remove baking sheet
+        wait(45mins)
 }
 
 enjoy
 
 
-		
+        

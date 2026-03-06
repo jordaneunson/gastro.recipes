@@ -1,8 +1,8 @@
 #!/bin/gastro
 largeZipLock(fridge) {
-		_porkTenderloin(0.5kg)
-		_italianSaladDressing(some)
-		wait(12hours)
+        _porkTenderloin(0.5kg)
+        _italianSaladDressing(some)
+        wait(12hours)
 }
 
 #preHeat oven
@@ -10,27 +10,27 @@ oven(375F) {}
 
 #make herb mix
 smallBowl() {
-		_garlic(6cloves){crushed}
-		_basil(lots){diced}
-		_oregano(lots){diced}
-		_thyme(lots){NO STEMS}
-		_sage(lots){diced}
-		_parsley(lots){diced}
+        _garlic(6cloves){crushed}
+        _basil(lots){diced}
+        _oregano(lots){diced}
+        _thyme(lots){NO STEMS}
+        _sage(lots){diced}
+        _parsley(lots){diced}
 }
 
 aluminumFoil(longSheet) {
-		_largeZipLock()
-		_seasoning(lots)
-		_smallBowl
-		_butter(pats){placed on top}
-		#wrap the meat like a burrito in the foil
+        _largeZipLock()
+        _seasoning(lots)
+        _smallBowl
+        _butter(pats){placed on top}
+        #wrap the meat like a burrito in the foil
 }
 
 oven(375F) {
-		aluminumFoil(burritoStyle)
-		while (internal temperature is < 145F) {
-				wait()
-		}
+        aluminumFoil(burritoStyle)
+        while (internal temperature is < 145F) {
+                wait()
+        }
 }
 
 rest(5mins)

@@ -3,23 +3,23 @@
 # 09/29/2021 porkBun() inspired, tested on theDread()
 
 smallStockPot(lowHeat) {
-		_campbellsPhoBroth(quart)
+        _campbellsPhoBroth(quart)
 }
 
 smallFryPan(mediumHeat) {
-			_oliveOil
-			_ginger
-			_garlics
-			_leek(1/2) { trimmed, quartered, cleaned }
-			_mushrooms(toMatch) {torn}
+            _oliveOil
+            _ginger
+            _garlics
+            _leek(1/2) { trimmed, quartered, cleaned }
+            _mushrooms(toMatch) {torn}
 }
 
 smallStockPot(lowHeat) {
-			# add the contents of smallFryPan
-			# spin the broth
-			_chingChong"4"ChingChong(2packets)
-			_egg(2)
-			_brocolliCrowns(toMatch)
+            # add the contents of smallFryPan
+            # spin the broth
+            _chingChong"4"ChingChong(2packets)
+            _egg(2)
+            _brocolliCrowns(toMatch)
 }
 
 
