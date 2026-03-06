@@ -1,22 +1,22 @@
 #!/bin/gastro
 
 _potatoSalad() {
-    _potatoes(1kg){cubed, boiled until tender}
-    _bacon(6 slices){cooked, crumbled}
-    _redOnion(1/2){diced}
-    _freshParsley(2tbsp){chopped}
+_potatoes(1kg){cubed, boiled until tender}
+_bacon(6 slices){cooked, crumbled}
+_redOnion(1/2){diced}
+_freshParsley(2tbsp){chopped}
 
 }
 
 _dressing() {
-    _baconDrippings(2tbsp)
-    _dijonMustard(2tbsp)
-    _appleCiderVinegar(3tbsp)
-    _oliveOil(2tbsp)
-    _salt(1tsp)
-    _blackPepper(1/2tsp)
+_baconDrippings(2tbsp)
+_dijonMustard(2tbsp)
+_appleCiderVinegar(3tbsp)
+_oliveOil(2tbsp)
+_salt(1tsp)
+_blackPepper(1/2tsp)
 }
 
 _mix() {
-    _potatoSalad ++ _dressing ++  _freshParsley
+_potatoSalad ++ _dressing ++  _freshParsley
 }

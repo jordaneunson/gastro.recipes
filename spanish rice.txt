@@ -5,49 +5,49 @@
 # 20201220 - v0.2 added acid at end
 
 declare theRice {
-        _brownRice(2/3cup)
-        rince(theRice)
-        soak(theRice) {
-        wait(30mins)  {skip ahead}
-        }
+    _brownRice(2/3cup)
+    rince(theRice)
+    soak(theRice) {
+    wait(30mins)  {skip ahead}
+    }
 }
 
 dutchOven(mediumhigh heat) {
-        _oliveoil(2glug)
-        _onion(1/3){diced}
-        _wobblySausage(1){crumbled}
-        _garlicClove(2){mooshed}
-        _paprika(6poofs)
-        _cumin(6crinkles)
-        _cilantroStalks(some chops)
-        _salt(12shakes)
-        meld()
+    _oliveoil(2glug)
+    _onion(1/3){diced}
+    _wobblySausage(1){crumbled}
+    _garlicClove(2){mooshed}
+    _paprika(6poofs)
+    _cumin(6crinkles)
+    _cilantroStalks(some chops)
+    _salt(12shakes)
+    meld()
 }
 
 dutchOven(high heat) {
-        deglaze(_pinotGris){}
-        $theRice
-        _tomatoCan(1/2)
-        _water
+    deglaze(_pinotGris){}
+    $theRice
+    _tomatoCan(1/2)
+    _water
 }
 
 dutchOven(lowHeat lidOn) {
-        while rice != cooked {
-                stir
-                taste
-                addwater
-                # then wonder why this is taking so long
-        }
+    while rice != cooked {
+        stir
+        taste
+        addwater
+        # then wonder why this is taking so long
+    }
 }
 
 dutchOven(noHeat lidOn) {
-        _blackBean(1/2can) {rinsed}
-        _freshCilantro
-        _lemon(1/4)
+    _blackBean(1/2can) {rinsed}
+    _freshCilantro
+    _lemon(1/4)
 }
 
- dish () {
-        _sourCream(noLactose)
+dish () {
+    _sourCream(noLactose)
 }
 
 or
@@ -55,5 +55,5 @@ or
 get a roti/burrito
 put a grilled sausage slices in it with cilantro fresh and tex mex cheese and sriarcha and then put the burrito filling in yum yum. 
 
-            
-        
+    
+    

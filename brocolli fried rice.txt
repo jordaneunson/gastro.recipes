@@ -1,25 +1,25 @@
 #!/bin/gastro
 
 soyMix() {
-    _soySauce(1tbsp)
-    _ponzu(1tbsp)
-    _sugar(1tbsp)
-    _ginger(1inch, grated)
-    _garlic(3cloves, crushed)
+_soySauce(1tbsp)
+_ponzu(1tbsp)
+_sugar(1tbsp)
+_ginger(1inch, grated)
+_garlic(3cloves, crushed)
 }
 
 veg() {
-    _broccoliHead(florets, stem)
-    _scallions
+_broccoliHead(florets, stem)
+_scallions
 }
 
 fryPan(highHeat, oil) {
-    _dayOldRice(1cup)
+_dayOldRice(1cup)
 }
 
 if (_dayOldRice == crispy) {
-    whiskedEggs(3)
-    soyMix()
-    veg()
-    _sesameOil(1tsp)
+whiskedEggs(3)
+soyMix()
+veg()
+_sesameOil(1tsp)
 }

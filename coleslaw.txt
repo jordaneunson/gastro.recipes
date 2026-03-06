@@ -1,23 +1,23 @@
 #!/bin/gastro
 
 _dressing() {
-    _mayonnaise(1/2 cup)
-    _whiteWineVinegar(3tbsp)
-    _appleCiderVinegar(2tbsp)
-    _canolaOil(2tbsp)
-    _honey(2tbsp)
-    _sugar(1tbsp)
-    _salt(1/2tsp)
-    _blackPepper(to taste)
-    _celerySeed(1/2tsp)
-    _mustard(1tsp){Dijon}
+_mayonnaise(1/2 cup)
+_whiteWineVinegar(3tbsp)
+_appleCiderVinegar(2tbsp)
+_canolaOil(2tbsp)
+_honey(2tbsp)
+_sugar(1tbsp)
+_salt(1/2tsp)
+_blackPepper(to taste)
+_celerySeed(1/2tsp)
+_mustard(1tsp){Dijon}
 }
 _coleslaw() {
-    _cabbage(4 cups){shredded}
-    _carrot(1){shredded}
-    _redOnion(1/4){sliced thin}
+_cabbage(4 cups){shredded}
+_carrot(1){shredded}
+_redOnion(1/4){sliced thin}
 }
 
 _mix() {
-    _coleslaw ++ _dressing
+_coleslaw ++ _dressing
 }

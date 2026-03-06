@@ -1,30 +1,30 @@
 #!/bin/gastro
 
 dutchOven(mediumHeat) {
-    _bacon(3strips){chopped}
-        when(_bacon){desired}
-            _onion(1){diced}
-            _celery(1){sliced}
-            _carrot(1){sliced}
+_bacon(3strips){chopped}
+    when(_bacon){desired}
+    _onion(1){diced}
+    _celery(1){sliced}
+    _carrot(1){sliced}
 }
 
 dutchOven(highHeat) {
-    _newPotatoes(enough){diced}
-    _chickenBroth(to cover)
-    _bayLeaf(2)
-    _thyme
+_newPotatoes(enough){diced}
+_chickenBroth(to cover)
+_bayLeaf(2)
+_thyme
 }
 
 smallPot(lowHeat) {
-    _milk(500ml)
-    _butter(2tbsp)
-    _flour(2tbsp)
+_milk(500ml)
+_butter(2tbsp)
+_flour(2tbsp)
 }
 
 
 dutchOven(noHeat) {
-    _smallPot
-    _cannedClams{withJuice}
-    _dill(the whole god damn package){chopped finely}
+_smallPot
+_cannedClams{withJuice}
+_dill(the whole god damn package){chopped finely}
 }
 

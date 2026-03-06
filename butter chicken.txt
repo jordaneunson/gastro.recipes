@@ -7,25 +7,25 @@
 # - BBQ the chicken on a stick—better.
 
 bowl() {
-    yogurtMixture() {
-        paste { _garlic(4) _ginger(1") _greenChili(0.5) }
-        _yogurt(4tbsp)
-        _flour(1tbsp)
-        mix
-    }
+yogurtMixture() {
+    paste { _garlic(4) _ginger(1") _greenChili(0.5) }
+    _yogurt(4tbsp)
+    _flour(1tbsp)
+    mix
+}
 }
 
 addSpice(yogurtMixture) {
-    _coriander(1tsp)
-    _cumin(1tsp)
-    _cinnamon(pinch)
-    _redChili(2tsp)
-    _saffron(pinch)
+_coriander(1tsp)
+_cumin(1tsp)
+_cinnamon(pinch)
+_redChili(2tsp)
+_saffron(pinch)
 }
 
 chickenBreasts(2) {     
-    slice
-    yogurtMixture()
+slice
+yogurtMixture()
 }
 
 fridge(2hrs) # Marinate for 2 hours.
@@ -35,28 +35,28 @@ fridge(2hrs) # Marinate for 2 hours.
 BBQ(highHeat)
 
 gravyPot(mediumLowHeat) {
-    melt() { _butter(cube) }
-    _fenugreek(25seeds) | _driedFenugreekLeaves() # Leaves are better.
-    _greenCardamom(6 pods | 54 seeds)
-    _cloves(5)
-    _cinnamonStick(piece)
-    _ginger(1/2 inch)
-    _chili(1/2)
+melt() { _butter(cube) }
+_fenugreek(25seeds) | _driedFenugreekLeaves() # Leaves are better.
+_greenCardamom(6 pods | 54 seeds)
+_cloves(5)
+_cinnamonStick(piece)
+_ginger(1/2 inch)
+_chili(1/2)
 
-    wait(10mins)
+wait(10mins)
 
-    _onion(1/2) # Do not brown.
-    _corianderPowder(1tsp)
-    _chiliPowder(1tsp heaping)
-    _tomatoPaste(3 heaps) # Trying jar... 250ml cream was too much.
+_onion(1/2) # Do not brown.
+_corianderPowder(1tsp)
+_chiliPowder(1tsp heaping)
+_tomatoPaste(3 heaps) # Trying jar... 250ml cream was too much.
 
-    _doubleCream | _heavyCream
-    _honey
-    _freshCorianderStalks
-    _salt(pinch)
-    _lemon(squeeze)
+_doubleCream | _heavyCream
+_honey
+_freshCorianderStalks
+_salt(pinch)
+_lemon(squeeze)
 
-    keep(3/10)
+keep(3/10)
 }
 
 bbqChicken() # Turn often, want charring. Don’t burn.

@@ -1,44 +1,44 @@
 #!/bin/gastro
 
 smallBowl():
-    creoleVeg() {
-        _onion(1){chopped}
-        _celery(2){chopped}
-        _redPepper(1){chopped}
-    }
+creoleVeg() {
+    _onion(1){chopped}
+    _celery(2){chopped}
+    _redPepper(1){chopped}
+}
 
 
 spices() {
-    _oregano
-    _hysSeasoning
-    _accentMSG
-    _fennel(24 seeds)
-    _paprika
-    _cayenne
+_oregano
+_hysSeasoning
+_accentMSG
+_fennel(24 seeds)
+_paprika
+_cayenne
 }
 
 dutchOven(mediumHeat):
-    roux(_butter(1 cup), _flour(1 cup))
-    while(color != dark):
-        stir()
-        wait(2mins)    # Looking for the color of an old penny
-    _creoleVeg
-    _garlic(6 cloves){crushed}
-    _spices()
-    _sausages(3, skinless)
-    _chickenThighs(2, skinless, boneless, optional)
-    _cannedTomatoes(14oz)
-    _chickenBroth(1 quart)
-    _beefBroth(1 quart)
-    _bayLeaves(3)
+roux(_butter(1 cup), _flour(1 cup))
+while(color != dark):
+    stir()
+    wait(2mins)    # Looking for the color of an old penny
+_creoleVeg
+_garlic(6 cloves){crushed}
+_spices()
+_sausages(3, skinless)
+_chickenThighs(2, skinless, boneless, optional)
+_cannedTomatoes(14oz)
+_chickenBroth(1 quart)
+_beefBroth(1 quart)
+_bayLeaves(3)
 
-    wait(30-60mins)
+wait(30-60mins)
 
 dutchOven(lowHeat):
-    lidOn()
-    wait(3hours)
+lidOn()
+wait(3hours)
 
 dutchOven(noHeat):
-    add(_preCookedPrawn)
+add(_preCookedPrawn)
 
 # Serve with bread as soup

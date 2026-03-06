@@ -1,31 +1,31 @@
 #!/bin/gastro
 dutchOven(mediumLowHeat) {
-    render() {
-        _baconFat
-        _butter
-    }
-    _onion(2medium){minced}
-    _cumin(3tsp)
-    _paprika(2tbsp)
-    _fennelSeeds(12)
-    _garlicCloves(4){crushed}
+render() {
+    _baconFat
+    _butter
+}
+_onion(2medium){minced}
+_cumin(3tsp)
+_paprika(2tbsp)
+_fennelSeeds(12)
+_garlicCloves(4){crushed}
 }
 
 smallBowl {
-    _stewBeef(1.5lbs)
-    _flour
-    toss()
+_stewBeef(1.5lbs)
+_flour
+toss()
 }
 
 dutchOven(mediumLowHeat) {
-    add(smallBowl)
-    _redWine
-    _cannedTomatoes(8oz)
-    _beefBroth(2cups)
-    _bayLeaves
-    # Optional
-    _carrots(1.5cups){sliced}
-    _potatoes(3cups){biteSized}
+add(smallBowl)
+_redWine
+_cannedTomatoes(8oz)
+_beefBroth(2cups)
+_bayLeaves
+# Optional
+_carrots(1.5cups){sliced}
+_potatoes(3cups){biteSized}
 }
 
 # 90 mins cook time, lower the better

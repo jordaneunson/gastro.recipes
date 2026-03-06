@@ -5,66 +5,66 @@
 # 20201220 - v0.2 added acid at end
 
 declare theRice {
-        _brownRice(2/3cup)
-        rince(theRice)
-        soak(theRice) {
-        wait(30mins)  {skip ahead}
-        }
+    _brownRice(2/3cup)
+    rince(theRice)
+    soak(theRice) {
+    wait(30mins)  {skip ahead}
+    }
 }
 
 dutchOven(mediumhigh heat) {
-        _oliveoil(2glug)
-        _onion(1/3){diced}
-        _wobblySausage(1){crumbled}
-        _garlicClove(2){mooshed}
-        _paprika(6poofs)
-        _cumin(6crinkles)
-        _cilantroStalks(some chops)
-        _salt(12shakes)
-        meld()
+    _oliveoil(2glug)
+    _onion(1/3){diced}
+    _wobblySausage(1){crumbled}
+    _garlicClove(2){mooshed}
+    _paprika(6poofs)
+    _cumin(6crinkles)
+    _cilantroStalks(some chops)
+    _salt(12shakes)
+    meld()
 }
 
 dutchOven(high heat) {
-        deglaze(_pinotGris){}
-        $theRice
-        _tomatoCan(1/2)
-        _water
+    deglaze(_pinotGris){}
+    $theRice
+    _tomatoCan(1/2)
+    _water
 }
 
 smallPot(mediumHeat) {
-        _dicedOnion(1/3)
-        _cumin(6crinkles)
+    _dicedOnion(1/3)
+    _cumin(6crinkles)
 }
 
 smallPot(lowHeat lidOn) {
-        _blackBean(1/2can) {rinsed}
+    _blackBean(1/2can) {rinsed}
 }
 
 dutchOven(lowHeat lidOn) {
-        while rice != cooked {
-                stir
-                taste
-                addwater
-                # then wonder why this is taking so long
-        }
+    while rice != cooked {
+        stir
+        taste
+        addwater
+        # then wonder why this is taking so long
+    }
 }
 
 
 dutchOven(noHeat) {
-        _lemon(1/4)
+    _lemon(1/4)
 }
 
 burrito() {
-        _tortilla
-        _theRice
-        _theBeans
-        _freshCilantro
-        _crushedTortillaChips
-        _choppedLettuce
-        _sourCream(noLactose)
-        _sriarcha
+    _tortilla
+    _theRice
+    _theBeans
+    _freshCilantro
+    _crushedTortillaChips
+    _choppedLettuce
+    _sourCream(noLactose)
+    _sriarcha
 }
 
 
-            
-        
+    
+    

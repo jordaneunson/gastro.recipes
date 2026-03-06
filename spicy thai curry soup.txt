@@ -1,37 +1,37 @@
 #!/bin/gastro
 
 dutchOven ( medium heat ) {
-        tillSoft()  {
-                _oliveOil(glugs)
-                _onion(diced)
-                _redPepper(diced)
-                _cilantroStalks(finelyChopped)
-                _limeLeaves(3){finelyChopped}
-                _lemongrass(stalk)
-                _curryPaste(2-3tbps)
-                _ginger(1inch)
-                _garlic(3)
-                }
-        _chickenStock(1box)
-        _coconutMilk(1can)
-        _coconutCream(if too spicy)
-        _soySauce(totaste)
-        _fishSauce(1tbsp)
-        _brownSugar(totaste)
+    tillSoft()  {
+        _oliveOil(glugs)
+        _onion(diced)
+        _redPepper(diced)
+        _cilantroStalks(finelyChopped)
+        _limeLeaves(3){finelyChopped}
+        _lemongrass(stalk)
+        _curryPaste(2-3tbps)
+        _ginger(1inch)
+        _garlic(3)
+        }
+    _chickenStock(1box)
+    _coconutMilk(1can)
+    _coconutCream(if too spicy)
+    _soySauce(totaste)
+    _fishSauce(1tbsp)
+    _brownSugar(totaste)
 }
 
 extra points if you take all the shitty veg from the fridge and put it in the soup base at this stage. 
 
 pot (high heat) {
-        _boilWater
-        _riceNoodles
+    _boilWater
+    _riceNoodles
 }
 
 build a soup
-        _shreddedChicken
-        _cilantro(chopped)
-        _greenOnions
-        _limeJuice
+    _shreddedChicken
+    _cilantro(chopped)
+    _greenOnions
+    _limeJuice
 
 
 

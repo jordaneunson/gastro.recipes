@@ -1,18 +1,18 @@
 #!/bin/gastro
 
 dutchOven(mediumHeat) {
-        _onion(1){diced}
-        _garlic(3){crushed}
+    _onion(1){diced}
+    _garlic(3){crushed}
 }
 
 dutchOven(highHeat) {
-        _chickenBroth(6cups)
-        _tinTomatoes(14oz)
-        _bayLeaf
-        simmer(30mins)
+    _chickenBroth(6cups)
+    _tinTomatoes(14oz)
+    _bayLeaf
+    simmer(30mins)
 }
 
 dutchOven(lowHeat) {
-        _tortelinis
-        _rotiserieChicken
+    _tortelinis
+    _rotiserieChicken
 } 

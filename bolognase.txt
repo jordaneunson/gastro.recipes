@@ -2,34 +2,34 @@
 # Servings: 4
 
 saucePan(mediumHeat) {
-    equalParts(_veal, _beef, _pork)
-    fry: equalParts
-    add: _redWine(enough)
-    wait: 30seconds
+equalParts(_veal, _beef, _pork)
+fry: equalParts
+add: _redWine(enough)
+wait: 30seconds
 }
 
 saucePan(mediumHeat) {
-    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
-    fry: tillSoft
+blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+fry: tillSoft
 }
 
 saucePan(highHeat) {
-    add: _chickenBroth(enoughForSauce)
-    add: _tomatoPaste(5.5oz)
-    add: _rosemary(1sprig), _bayLeaf(2)
-    mix: all
+add: _chickenBroth(enoughForSauce)
+add: _tomatoPaste(5.5oz)
+add: _rosemary(1sprig), _bayLeaf(2)
+mix: all
 }
 
 saucePan(lowHeat, lid-on) {
-    wait: 40mins
-    add: _milk(1/2cup)
+wait: 40mins
+add: _milk(1/2cup)
 }
 
 largePot(highHeat, boilingWater) {
-    cook: _spaghetti
+cook: _spaghetti
 }
 
 plate {
-    toss: _spaghetti, _sauce
-    garnish: _shreddedParm, _fineParsley
+toss: _spaghetti, _sauce
+garnish: _shreddedParm, _fineParsley
 }

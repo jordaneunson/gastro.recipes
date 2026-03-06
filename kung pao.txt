@@ -1,40 +1,40 @@
 #!/bin/gastro
 
 mediumPot(highHeat) {
-        _water(boil)
+    _water(boil)
 }
 
 smallBowl() {
-        _garlic(4){crushed}
-        _ginger(2"){grated}
-        _sesameOil(2tbsp)
-        _soy(1/2cup)
-        _riceVinegar(2tbsp)
-        _chickenStock(1/2cup)
-        _cornstarch(2tbsp)
+    _garlic(4){crushed}
+    _ginger(2"){grated}
+    _sesameOil(2tbsp)
+    _soy(1/2cup)
+    _riceVinegar(2tbsp)
+    _chickenStock(1/2cup)
+    _cornstarch(2tbsp)
 }
 
 prep() {
-        _steak(1lb){stripped}
-        _broccoli(2 cups){florets}
-        _carrots(2 cups){sliced thin}
-        _redPepper(0.5 cup)
-        _redOnion(0.5 cup)
-        _celery(0.5cup)
-        _redChillies(3){de-seeded}
+    _steak(1lb){stripped}
+    _broccoli(2 cups){florets}
+    _carrots(2 cups){sliced thin}
+    _redPepper(0.5 cup)
+    _redOnion(0.5 cup)
+    _celery(0.5cup)
+    _redChillies(3){de-seeded}
 }
 
 wok(highHeat) {
-        +prep()
-        cook(3mins)
-        +smallBowl()
+    +prep()
+    cook(3mins)
+    +smallBowl()
 }
 
 mediumPot(highHeat) {
-        _chowMeinNoodles
+    _chowMeinNoodles
 }
 
 garnish {
-    _cilantro
-    _peanuts
+_cilantro
+_peanuts
 }
