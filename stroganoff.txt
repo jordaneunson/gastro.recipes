@@ -2,60 +2,60 @@
 
 prepCounter() {
     _steak() {
-            #wash and trim
-            _seasoning
+        #wash and trim
+        _seasoning
     }
 }
 
 largeSkillet(mediumHeat) {
-        _oliveOil
-        _butter(2tbsp)
-        _mushrooms(300G){sliced}
-        _onion(1large){diced}
-        _garlic(2cloves)
-        _seasonings
+    _oliveOil
+    _butter(2tbsp)
+    _mushrooms(300G){sliced}
+    _onion(1large){diced}
+    _garlic(2cloves)
+    _seasonings
 }
 
 smallPot(lowHeat) {
-        _butter(2tbsp)
-        _cream(1/4cup)
-        _sourCream(150ml)
-        _flour(1tbsp)
-        _cornstarch(to thicken as needed)
+    _butter(2tbsp)
+    _cream(1/4cup)
+    _sourCream(150ml)
+    _flour(1tbsp)
+    _cornstarch(to thicken as needed)
 }
 
 largeSkillet(highHeat) {
-        _beefBroth(2cups)
-        _bayLeaf
-        #bring to boil then lower heat to simmer
+    _beefBroth(2cups)
+    _bayLeaf
+    #bring to boil then lower heat to simmer
 }
 
 mediumPot(highHeat) {
-        _water(boil)
-        _eggNoodles(enough)
+    _water(boil)
+    _eggNoodles(enough)
 }
 
 largeSkillet(lowHeat) {
-        add(smallPot)
-        _canPeas(1/2)
-        mix()
+    add(smallPot)
+    _canPeas(1/2)
+    mix()
 }
 
 stoneSkillet(highHeat) {
-        _oliveOil
-        _steak
+    _oliveOil
+    _steak
+    wait(30seconds)
+    flip()
+    _butter
+    _thyme
+    _garlicClove
+    while(steak != done) {
         wait(30seconds)
         flip()
-        _butter
-        _thyme
-        _garlicClove
-        while(steak != done) {
-                wait(30seconds)
-                flip()
-        }
+    }
 }
 
 prepCounter() {
-        _steak(rest)
-        slice()
+    _steak(rest)
+    slice()
 }

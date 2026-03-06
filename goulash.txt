@@ -1,8 +1,8 @@
 #!/bin/gastro
 dutchOven(mediumLowHeat) {
     render() {
-        _baconFat
-        _butter
+    _baconFat
+    _butter
     }
     _onion(2medium){minced}
     _cumin(3tsp)

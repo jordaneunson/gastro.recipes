@@ -2,7 +2,7 @@
 
 dutchOven(mediumHeat) {
     _bacon(3strips){chopped}
-        when(_bacon){desired}
+    when(_bacon){desired}
             _onion(1){diced}
             _celery(1){sliced}
             _carrot(1){sliced}

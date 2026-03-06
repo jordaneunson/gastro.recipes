@@ -20,11 +20,11 @@ dutchOven(mediumHeat) {
     remove(_chickenThighs)
     _oliveOil
     cookTillSoft() {
-        add(largeBowl)
-        _thyme(8sprigs) {tied together}
-        _basil(2tbsp) {diced}
-        _parsley(2tbsp) {diced}
-        _driedOregano(1tsp)
+    add(largeBowl)
+    _thyme(8sprigs) {tied together}
+    _basil(2tbsp) {diced}
+    _parsley(2tbsp) {diced}
+    _driedOregano(1tsp)
     }
     _redWine(150ml)
     scrapeBottom()

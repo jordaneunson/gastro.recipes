@@ -7,15 +7,15 @@ mediumPot(highHeat) {
 
 smallPot(mediumHeat) {
     roux() {
-        _butter(1/2cup)
-        _flour(1/2cup)
-        stir(){15mins}
+    _butter(1/2cup)
+    _flour(1/2cup)
+    stir(){15mins}
     }
     _cheese(1/2cup){variousTypes}
     flavourNugget(crushedandmixed) {
-        _garlic(2cloves)
-        _rosemary
-        _oregano
+    _garlic(2cloves)
+    _rosemary
+    _oregano
     }
 }
 

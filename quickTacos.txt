@@ -2,12 +2,12 @@
 
 _sauce() {
     blend() {
-        _feta(4oz)
-        _garlic(8){cloves}
-        _greekYogurt(1/2 cup){low fat}
-        _water(splash)
-        _salt(big pinch)
-        _oliveOil(1tbsp)
+    _feta(4oz)
+    _garlic(8){cloves}
+    _greekYogurt(1/2 cup){low fat}
+    _water(splash)
+    _salt(big pinch)
+    _oliveOil(1tbsp)
     }
 }
 
@@ -23,11 +23,11 @@ _veg() {
 
 _steak() {
     _rub() {
-        _pepper
-        _paprika
-        _coriander
-        _cumin
-        _salt
+    _pepper
+    _paprika
+    _coriander
+    _cumin
+    _salt
     }
 }
 

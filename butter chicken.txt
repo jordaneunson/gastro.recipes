@@ -8,10 +8,10 @@
 
 bowl() {
     yogurtMixture() {
-        paste { _garlic(4) _ginger(1") _greenChili(0.5) }
-        _yogurt(4tbsp)
-        _flour(1tbsp)
-        mix
+    paste { _garlic(4) _ginger(1") _greenChili(0.5) }
+    _yogurt(4tbsp)
+    _flour(1tbsp)
+    mix
     }
 }
 

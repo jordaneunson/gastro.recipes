@@ -29,7 +29,7 @@ while (risotto != done) {
     stir
     repeat(add _veggieBroth, stir)
     if (risotto == 80%) {
-        addFixings()
+    addFixings()
     }
 }
 

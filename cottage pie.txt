@@ -27,16 +27,16 @@ oven(400C) {}
 largePot(highHeat) {
     _potatoes(4){peeled}
     mash() {
-        _butter
-        _milk
-        _parm
+    _butter
+    _milk
+    _parm
     }
 }
 
 casseroleDish {
     layer() {
-        _fryingPan
-        _largePot
+    _fryingPan
+    _largePot
     }
 }
 

@@ -6,7 +6,7 @@ preHeat(oven(300F))
 
 dutchOven(mediumHighHeat, _oliveOil) {
     sear() {
-        season(_shortRib(1lb))
+    season(_shortRib(1lb))
     }
 }
 
@@ -15,9 +15,9 @@ bits = slice(_onion, _shallot, _garlicClove(3))
 dutchOven(mediumHeat) {
     bits
     while (bits != soft) {
-        _wine(1/3cup)
-        _soy(2tbsp)
-        _broth(1/3cup)
+    _wine(1/3cup)
+    _soy(2tbsp)
+    _broth(1/3cup)
     }
 }
 

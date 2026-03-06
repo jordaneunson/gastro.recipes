@@ -2,9 +2,9 @@
 
 smallBowl():
     creoleVeg() {
-        _onion(1){chopped}
-        _celery(2){chopped}
-        _redPepper(1){chopped}
+    _onion(1){chopped}
+    _celery(2){chopped}
+    _redPepper(1){chopped}
     }
 
 
@@ -20,8 +20,8 @@ spices() {
 dutchOven(mediumHeat):
     roux(_butter(1 cup), _flour(1 cup))
     while(color != dark):
-        stir()
-        wait(2mins)    # Looking for the color of an old penny
+    stir()
+    wait(2mins)    # Looking for the color of an old penny
     _creoleVeg
     _garlic(6 cloves){crushed}
     _spices()

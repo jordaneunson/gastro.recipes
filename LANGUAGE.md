@@ -1,29 +1,29 @@
-# .eng Language Specification
+# gastro Language Specification
 
-**masticable.eng** — a domain-specific language for writing recipes as code.
+**gastro** — a domain-specific language for writing recipes as code.
 
-Version: 0.1.0
+Version: 0.2.0
 
 ---
 
 ## 1. File Format
 
-- **Extension:** `.txt` (future: `.eng`)
+- **Extension:** `.txt`
 - **Encoding:** UTF-8
 - **Line endings:** LF or CRLF
-- **Indentation:** 4 spaces (tabs tolerated, don't mix)
+- **Indentation:** 4 spaces (no tabs)
 
 ---
 
 ## 2. Shebang
 
-Optional. Declares the recipe name.
+Every recipe starts with:
 
 ```
-#!/bin/bolognese
+#!/bin/gastro
 ```
 
-The path after `#!` is always `/bin/` followed by the recipe identifier in camelCase or lowercase.
+The shebang is always `#!/bin/gastro` — it declares the file as a gastro recipe. The dish name comes from the filename, not the shebang.
 
 ---
 
@@ -39,7 +39,7 @@ Single-line only. Start with `#`.
 **Metadata comments** use `# Key: Value` syntax on lines immediately following the shebang:
 
 ```
-#!/bin/bolognese
+#!/bin/gastro
 # Servings: 4
 # Time: 90mins
 # Difficulty: medium
@@ -151,6 +151,7 @@ camelCase. Common equipment:
 | `largePan` | Large pan |
 | `bakingDish` | Oven baking dish |
 | `bakingPan` | Baking pan |
+| `prepCounter` | Prep surface (no heat) |
 
 ### 5.3 Heat Arguments
 
@@ -165,26 +166,32 @@ Heat is the first argument. Can be a named level or a temperature:
 **Combined arguments:**
 ```
 dutchOven(325F, lidOn)
-bake(400F, 10mins)
 largePot(highHeat, boilingWater)
+saucePan(lowHeat, lid-on)
 ```
 
 ### 5.4 Sequential Blocks
 
-The same equipment can appear multiple times. Each block represents a phase:
+The same equipment can appear multiple times. Each block represents a phase — a change in heat, a new stage, or a return to the vessel later:
 
 ```
-dutchOven(mediumHighHeat) {
-    _oliveOil
-    _shortRibs
-    sear(allSides)
-    remove()
+saucePan(mediumHeat) {
+    equalParts(_veal, _beef, _pork)
+    fry: equalParts
+    add: _redWine(enough)
+    wait: 30seconds
 }
 
-dutchOven(mediumHeat) {
-    _onion(1){chunked}
-    _carrots(3){chunked}
-    cook(5mins)
+saucePan(mediumHeat) {
+    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+    fry: tillSoft
+}
+
+saucePan(highHeat) {
+    add: _chickenBroth(enoughForSauce)
+    add: _tomatoPaste(5.5oz)
+    add: _rosemary(1sprig), _bayLeaf(2)
+    mix: all
 }
 ```
 
@@ -196,7 +203,26 @@ The equipment persists between blocks — contents carry forward unless explicit
 
 Actions are function calls that represent cooking operations.
 
-### 6.1 Basic Actions
+### 6.1 Colon Syntax
+
+The preferred form. Clean, readable, and consistent:
+
+```
+fry: equalParts
+add: _redWine(enough)
+add: _chickenBroth(enoughForSauce)
+mix: all
+toss: _spaghetti, _sauce
+garnish: _shreddedParm, _fineParsley
+cook: _spaghetti
+wait: 40mins
+```
+
+Multiple targets are comma-separated after the colon.
+
+### 6.2 Function-Call Syntax
+
+Also valid. Use when it reads more naturally:
 
 ```
 cook(5mins)
@@ -206,35 +232,20 @@ stir(untilMelted)
 deglaze()
 flip()
 remove()
-drain()
 drain(fat)
-boil(15mins)
-bake(25mins)
-broil(3mins){golden}
+blitz(half)
 rest(10mins)
 slice()
 ```
 
-### 6.2 Action Arguments
+### 6.3 Action Arguments
 
 - **Time:** `cook(5mins)`, `simmer(40mins)`, `wait(30seconds)`
 - **Condition:** `stir(untilMelted)`, `cook(tillSoft)`, `cook(alDente)`
 - **Target:** `drain(fat)`, `blitz(half)`
 - **Scope:** `sear(allSides)`, `cook(5mins){eachSide}`
 
-### 6.3 Colon Syntax (alternate)
-
-Actions can also use `key: value` form:
-
-```
-fry: equalParts
-add: _redWine(enough)
-garnish: _shreddedParm, _fineParsley
-mix: all
-toss: _spaghetti, _sauce
-```
-
-Both function-call and colon syntax are valid. Use whichever reads better.
+Both syntaxes are valid. Use whichever reads better — but favour colon syntax for clarity.
 
 ---
 
@@ -270,13 +281,28 @@ wok(highHeat) {
 }
 ```
 
-### 7.3 Common Function Names
+### 7.3 Nested Functions
+
+Functions can nest inside equipment blocks:
+
+```
+prepCounter() {
+    _steak() {
+        #wash and trim
+        _seasoning
+    }
+}
+```
+
+### 7.4 Common Function Names
 
 | Name | Purpose |
 |------|---------|
 | `prep()` | Ingredient preparation before cooking |
 | `marinade()` | Marinade composition |
 | `breading()` | Coating/breading mixture |
+| `cascadingFry()` | Sequential frying of ingredients in order |
+| `equalParts()` | Equal portions of listed ingredients |
 | `serve()` | Plating and garnish |
 | `plate` | Alias for serve (block form) |
 
@@ -344,22 +370,24 @@ add(smallPot)
 
 ## 10. Output
 
-### 10.1 Serve Block
+### 10.1 Plate Block
+
+The standard recipe endpoint:
+
+```
+plate {
+    toss: _spaghetti, _sauce
+    garnish: _shreddedParm, _fineParsley
+}
+```
+
+### 10.2 Serve Block
 
 ```
 serve() {
     _basmatiRice
     _naanBread
     garnish: _cilantro
-}
-```
-
-### 10.2 Plate Block
-
-```
-plate {
-    toss: _spaghetti, _sauce
-    garnish: _shreddedParm, _fineParsley
 }
 ```
 
@@ -398,25 +426,81 @@ bakingDish(400F) {
 
 ---
 
-## 12. Style Guide
+## 12. Canonical Example
 
-1. **Shebang** — include it. It names the dish.
+The bolognese recipe demonstrates the ideal structure:
+
+```
+#!/bin/gastro
+# Servings: 4
+
+saucePan(mediumHeat) {
+    equalParts(_veal, _beef, _pork)
+    fry: equalParts
+    add: _redWine(enough)
+    wait: 30seconds
+}
+
+saucePan(mediumHeat) {
+    blitz: _onion(1/2), _carrot(1), _celeryStalk(1)
+    fry: tillSoft
+}
+
+saucePan(highHeat) {
+    add: _chickenBroth(enoughForSauce)
+    add: _tomatoPaste(5.5oz)
+    add: _rosemary(1sprig), _bayLeaf(2)
+    mix: all
+}
+
+saucePan(lowHeat, lid-on) {
+    wait: 40mins
+    add: _milk(1/2cup)
+}
+
+largePot(highHeat, boilingWater) {
+    cook: _spaghetti
+}
+
+plate {
+    toss: _spaghetti, _sauce
+    garnish: _shreddedParm, _fineParsley
+}
+```
+
+Key patterns:
+- `#!/bin/gastro` shebang — always the same
+- Metadata as comments (`# Servings: 4`)
+- Equipment blocks with heat as first argument
+- Same equipment reused across phases with different heat
+- Colon syntax for actions (`fry:`, `add:`, `mix:`, `toss:`, `garnish:`)
+- Ingredients always prefixed with `_`
+- `plate` block as endpoint
+- 4-space indentation throughout
+- Clean, readable, minimal
+
+---
+
+## 13. Style Guide
+
+1. **Shebang** — always `#!/bin/gastro`.
 2. **Ingredient prefix** — always `_`. No exceptions.
 3. **Equipment** — camelCase. Heat in first argument.
 4. **Quantities** — in `()`. Be as precise or vague as the recipe demands.
 5. **Modifiers** — in `{}`. Comma-separated if multiple.
-6. **Comments** — use freely. Especially for warnings and timing notes.
-7. **Indentation** — 4 spaces inside blocks.
-8. **Naming** — files named after the dish, plain English, `.txt` extension.
-9. **Plain English** — always acceptable. If pseudocode doesn't serve the recipe, write prose. The language adapts to the cook.
+6. **Actions** — prefer colon syntax (`add: _thing`) for readability.
+7. **Comments** — use freely. Especially for warnings and timing notes.
+8. **Indentation** — 4 spaces inside blocks. Nested blocks get another 4.
+9. **Naming** — files named after the dish, plain English, `.txt` extension.
+10. **Plain English** — always acceptable in comments and descriptive quantities. The language adapts to the cook.
 
 ---
 
-## 13. Grammar (informal BNF)
+## 14. Grammar (informal BNF)
 
 ```
 recipe        ::= shebang? metadata* (block | statement)*
-shebang       ::= '#!/bin/' identifier
+shebang       ::= '#!/bin/gastro'
 metadata      ::= '#' key ':' value
 block         ::= (equipment | function | output | control) '{' statement* '}'
 equipment     ::= name '(' args ')'
@@ -427,7 +511,7 @@ statement     ::= ingredient | action | comment | block | reference
 ingredient    ::= '_' name quantity? modifier?
 quantity      ::= '(' value ')'
 modifier      ::= '{' value (',' value)* '}'
-action        ::= name '(' args? ')' modifier? | name ':' value
+action        ::= name '(' args? ')' modifier? | name ':' value (',' value)*
 reference     ::= '+' name '(' ')'
 comment       ::= '#' text
 args          ::= value (',' value)*
@@ -437,22 +521,21 @@ identifier    ::= [a-zA-Z][a-zA-Z0-9_-]*
 
 ---
 
-## 14. Reserved Words
+## 15. Reserved Words
 
-`serve`, `plate`, `garnish`, `prep`, `bam`, `while`, `when`, `add`, `remove`, `wait`
+`serve`, `plate`, `garnish`, `prep`, `bam`, `while`, `when`, `add`, `remove`, `wait`, `equalParts`, `cascadingFry`
 
 ---
 
-## 15. Future
+## 16. Future
 
-- `.eng` file extension
 - Syntax highlighting (VS Code, Sublime)
-- `eng lint` — validate recipe structure
-- `eng render` — output formatted recipe card (HTML, terminal, PDF)
-- `eng convert` — import from plain text / Markdown recipes
+- `gastro lint` — validate recipe structure
+- `gastro render` — output formatted recipe card (HTML, terminal, PDF)
+- `gastro convert` — import from plain text / Markdown recipes
 - Nutritional data lookup from ingredient names
 - Timing calculator from `wait()` and `cook()` calls
 
 ---
 
-*masticable.eng v0.1.0 — cook first, document second.*
+*gastro v0.2.0 — cook first, document second.*

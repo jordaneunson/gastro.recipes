@@ -3,7 +3,7 @@
 # 09/29/2021 porkBun() inspired, tested on theDread()
 
 smallStockPot(lowHeat) {
-        _campbellsPhoBroth(quart)
+    _campbellsPhoBroth(quart)
 }
 
 smallFryPan(mediumHeat) {
