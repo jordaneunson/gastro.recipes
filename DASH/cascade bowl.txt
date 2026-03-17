@@ -4,7 +4,7 @@
 # Difficulty: medium
 # DASH: low sodium, plant-forward, heart-healthy
 # Shopping: pickled beets (Love Beets or store brand), tahini (nut butter aisle),
-#           white miso (Asian foods or refrigerated), spring mix (pre-washed bag)
+# white miso (Asian foods or refrigerated), spring mix (pre-washed bag)
 
 tahiniDressing() {
     _tahini(2tbsp)
