@@ -1,58 +1,78 @@
 #!/bin/gastro
-# Servings: 6
-# Time: 60mins
-# Difficulty: easy
+# White Bean, Potato & Lentil Chili
+# Heart-healthy / BP-friendly
+# No added sodium — season to taste at the table
+# Potassium-loaded: beans, potatoes, lentils, spinach
 
-spiceBlend() {
-    _cumin(1tbsp)
-    _coriander(1tsp)
-    _turmeric(1tsp)
-    _blackPepper(1/2tsp)
-    _oregano(1tsp)
-    _cayenne(1/4tsp)
+prep() {
+    _onion(1){diced}
+    _celery(3stalks){diced}
+    _garlic(6cloves){minced}
+    _ginger(1"){grated}
+    _yukonGold(3medium){cubed, 1/2inch}
+    _greenChiles(2){roasted, diced}
+    _jalapeño(1){seeded, minced}
+}
+
+soak() {
+    _cannelliniBeans(1cup){dried}
+    # Overnight or quick soak 1hr
+    _greenLentils(1/2cup){rinsed}
 }
 
 dutchOven(mediumHeat) {
     add: _oliveOil(2tbsp)
-    add: _onion(1){diced}
-    add: _celery(2stalks){diced}
-    cook: tillSoft
-    add: _garlic(4cloves){minced}
-    add: _ginger(1tbsp){grated}
-    add: _jalapeno(1){seeded, minced}
-    cook: 1min
+    add: _onion
+    add: _celery
+    soften: 5mins
+    add: _garlic
+    add: _ginger
+    stir: 1min
+
+    # Spice bloom
+    add: _cumin(2tsp)
+    add: _coriander(1tsp)
+    add: _turmeric(1tsp)
+    add: _blackPepper(1/2tsp)
+    add: _oregano(1tsp)
+    add: _cayenne(pinch)
+    stir: 30sec
 }
 
 dutchOven(mediumHeat) {
-    add: spiceBlend()
-    stir: 30seconds
-    # bloom the spices, don't let them burn
+    add: _cannelliniBeans{drained}
+    add: _greenLentils
+    add: _yukonGold
+    add: _greenChiles
+    add: _jalapeño
+    add: _water(6cups)
+    # No stock. Water + aromatics = cleaner flavor, zero sodium.
+    add: _bayLeaf(2)
+    stir
 }
 
-dutchOven(highHeat) {
-    add: _greenLentils(1/2cup){rinsed}
-    add: _yukonGoldPotatoes(1lb){cubed}
-    add: _cannedGreenChiles(4oz){diced}
-    add: _cannedTomatoes(14oz){diced, noSaltAdded}
-    add: _water(4cups)
-    # no stock — zero added sodium, season at the table
-    boil
+dutchOven(lowHeat) {
+    simmer: 45mins
+    # Potatoes will break down slightly — thickens naturally
+    # Lentils and beans should be tender
+    # Add water if too thick
+
+    remove: _bayLeaf
+
+    add: _spinach(2handfuls){rough chop}
+    stir: 2mins
+    # Wilts into the chili — magnesium + potassium
+
+    add: _lime(1){juiced}
+    stir
 }
 
-dutchOven(lowHeat, lidOn) {
-    simmer: 35mins
-    # potatoes break down and thicken naturally
-    # lentils should be tender
-}
+# ---- Serve ----
 
-dutchOven(noHeat) {
-    add: _whiteBeans(2cans){drained, rinsed, noSaltAdded}
-    # cannellini or Great Northern
-    add: _spinach(4cups){fresh}
-    stir: untilWilted
-    add: _limeJuice(2limes)
-}
+serve: inBowls
 
-serve() {
-    garnish: _avocado{sliced}, _pumpkinSeeds{toasted}, _cilantro{fresh}, _limeWedge
-}
+# Toppings
+garnish: _avocado{sliced}
+garnish: _pumpkinSeeds(handful){toasted}
+garnish: _cilantro{torn}
+garnish: _lime(wedge)
