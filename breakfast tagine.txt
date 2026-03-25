@@ -1,0 +1,59 @@
+#!/bin/gastro
+# Servings: 2
+# Time: 30mins
+# Source: Cafe Medina, Vancouver (adapted)
+
+raita() {
+    _yogurt(1/2cup)
+    _cucumber(1/4){grated, squeezed}
+    _mint(few leaves){torn}
+    _cumin(pinch)
+    _salt(pinch)
+    mix
+}
+
+castIron(mediumHeat) {
+    add: _oliveOil(2tbsp)
+    add: _onion(1){diced}
+    cook: tillSoft
+    add: _garlic(3cloves){minced}
+    cook: 1min
+    add: _merguez(1/2lb){sliced, 1/2inch}
+    # lamb merguez preferred. chorizo works in a pinch
+    cook: 3mins
+}
+
+castIron(mediumHeat) {
+    add: _rasElHanout(1tbsp)
+    add: _smokedPaprika(1tsp)
+    add: _harissa(2tbsp)
+    stir: 1min
+    # toast the spices, don't burn
+}
+
+castIron(mediumHeat) {
+    add: _dicedTomatoes(1can){fire-roasted}
+    add: _chickpeas(1can){drained, rinsed}
+    add: _tomatoPaste(2tbsp)
+    add: _preservedLemon(1){chopped}
+    # preserved lemon is the move. don't skip.
+    stir: all
+    simmer: 10mins
+}
+
+castIron(mediumLowHeat) {
+    add: _blackOlives(handful){halved}
+    # make 4 wells in the stew
+    crack: _eggs(4)
+    # into the wells
+    cover
+    cook: 5mins
+    # whites set, yolks runny
+}
+
+plate {
+    spoon: _tagine
+    dollop: raita()
+    add: _focaccia{grilled}
+    garnish: _cilantro(handful){rough chop}
+}
