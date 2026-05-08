@@ -20,8 +20,7 @@ dutchOven(mediumHeat) {
     add: _flour(1cup)
     # Looking for the color of an old penny
     while (color != dark) {
-        stir
-        wait: 2mins
+        stir(every 2mins)
     }
     add: creoleVeg()
     add: _garlic(6cloves){crushed}
