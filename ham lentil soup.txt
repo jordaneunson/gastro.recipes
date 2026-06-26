@@ -1,0 +1,41 @@
+#!/bin/gastro
+# Servings: 4
+# Time: 45mins
+# Difficulty: easy
+
+dutchOven(mediumHeat) {
+    add: _oliveOil(1tbsp)
+    add: _hamSteak(1){diced}
+    fry: tillBrownedEdges
+    remove: _hamSteak{some, for garnish}
+}
+
+dutchOven(mediumHeat) {
+    add: _onion(1){diced}
+    add: _carrot(2){diced}
+    fry: 6mins{tillSoft}
+    add: _garlic(4cloves){minced}
+    add: _smokedPaprika(1tsp), _cumin(1/2tsp), _thyme(1/2tsp), _blackPepper(generous)
+    add: _chiliFlakes(pinch)
+    stir: 30seconds{toastSpices}
+}
+
+dutchOven(mediumHighHeat) {
+    add: _lentils(1.5cups){rinsed}
+    add: _broth(6cups)
+    add: _bayLeaf(1)
+    stir: all
+    simmer: 30mins{untilLentilsTender}
+}
+
+dutchOven(lowHeat) {
+    remove: _bayLeaf
+    mash: _soup(some){againstSideOfPot}
+    add: _vinegar(1tbsp) || _lemonJuice(1tbsp)
+    salt: onlyIfNeeded
+}
+
+plate {
+    ladle: _soup
+    garnish: _hamSteak{reserved}, _hotSauce || _parsley
+}
