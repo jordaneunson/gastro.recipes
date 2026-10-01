@@ -7,7 +7,6 @@ dutchOven(mediumHeat) {
     add: _oliveOil(1tbsp)
     add: _hamSteak(1){diced}
     fry: tillBrownedEdges
-    remove: _hamSteak{some, for garnish}
 }
 
 dutchOven(mediumHeat) {
@@ -17,6 +16,7 @@ dutchOven(mediumHeat) {
     add: _garlic(4cloves){minced}
     add: _smokedPaprika(1tsp), _cumin(1/2tsp), _thyme(1/2tsp), _blackPepper(generous)
     add: _chiliFlakes(pinch)
+	add: tomato(1){diced}
     stir: 30seconds{toastSpices}
 }
 
@@ -35,7 +35,6 @@ dutchOven(lowHeat) {
     salt: onlyIfNeeded
 }
 
-plate {
+bowl {
     ladle: _soup
-    garnish: _hamSteak{reserved}, _hotSauce || _parsley
 }
